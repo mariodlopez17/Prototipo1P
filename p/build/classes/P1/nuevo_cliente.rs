@@ -1,0 +1,9 @@
+pelicula.nuevo_cliente$6
+pelicula.nuevo_cliente$5
+pelicula.nuevo_cliente$4
+pelicula.nuevo_cliente$3
+pelicula.nuevo_cliente$2
+pelicula.nuevo_cliente$1
+pelicula.nuevo_cliente
+pelicula.nuevo_cliente$8
+pelicula.nuevo_cliente$7
