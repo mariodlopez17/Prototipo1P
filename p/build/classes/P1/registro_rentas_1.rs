@@ -1,0 +1,6 @@
+pelicula.registro_rentas_1$4
+pelicula.registro_rentas_1$5
+pelicula.registro_rentas_1
+pelicula.registro_rentas_1$2
+pelicula.registro_rentas_1$3
+pelicula.registro_rentas_1$1

@@ -1,0 +1,5 @@
+pelicula.registro_peliculas$4
+pelicula.registro_peliculas$3
+pelicula.registro_peliculas$2
+pelicula.registro_peliculas$1
+pelicula.registro_peliculas
