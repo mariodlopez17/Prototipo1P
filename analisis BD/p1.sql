@@ -54,7 +54,7 @@ CREATE TABLE `compras` (
   `total` varchar(45) NOT NULL,
   `fechacompra` date NOT NULL,
   PRIMARY KEY (`idcompras`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `compras` (
 
 LOCK TABLES `compras` WRITE;
 /*!40000 ALTER TABLE `compras` DISABLE KEYS */;
-INSERT INTO `compras` VALUES (1,1,'2','100','2022-08-09'),(2,2,'5','50','2022-08-10');
+INSERT INTO `compras` VALUES (1,1,'2','100','2022-08-09'),(2,2,'5','50','2022-08-10'),(3,3,'5','100','2022-08-09');
 /*!40000 ALTER TABLE `compras` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +107,7 @@ CREATE TABLE `producto` (
   PRIMARY KEY (`idproducto`),
   KEY `idproveedor_idx` (`idproveedor`),
   CONSTRAINT `idproveedor` FOREIGN KEY (`idproveedor`) REFERENCES `proveedor` (`idproveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +116,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (1,1,'Tierra',25),(2,2,'Abono',50),(3,2,'Abono',100);
+INSERT INTO `producto` VALUES (1,1,'Tierra',25),(2,2,'Abono',50),(3,2,'Abono',100),(12,4,'Palas',100);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,7 +134,7 @@ CREATE TABLE `proveedor` (
   `producto` varchar(45) NOT NULL,
   `correo` varchar(45) NOT NULL,
   PRIMARY KEY (`idproveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,7 +143,7 @@ CREATE TABLE `proveedor` (
 
 LOCK TABLES `proveedor` WRITE;
 /*!40000 ALTER TABLE `proveedor` DISABLE KEYS */;
-INSERT INTO `proveedor` VALUES (1,'Julio','55447688','Tierra','j@gmail.com'),(2,'Juan','66779988','Abono','ju@gmail.com'),(3,'Ale','33550022','Herramientas','ale@gmail.com');
+INSERT INTO `proveedor` VALUES (1,'Julio','55447688','Tierra','j@gmail.com'),(2,'Juan','66779988','Abono','ju@gmail.com'),(3,'Ale','33550022','Herramientas','ale@gmail.com'),(4,'Mario','32001212','Palas','m@gmail.com'),(5,'Azael','2234500','Picos','Az@gmail.com');
 /*!40000 ALTER TABLE `proveedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +166,7 @@ UNLOCK TABLES;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `agregar_cliente`(in idproducto int, in idproveedor int, in descripcion varchar(45), in precio int )
 BEGIN
-insert into clientes (idproducto,idproveedor,descripcion,precio)
+insert into producto (idproducto,idproveedor,descripcion,precio)
 values (idproducto,idproveedor,descripcion,precio);
 END ;;
 DELIMITER ;
@@ -206,4 +206,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-09 13:17:41
+-- Dump completed on 2022-08-09 14:00:41

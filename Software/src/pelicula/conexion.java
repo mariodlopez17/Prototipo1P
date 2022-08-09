@@ -183,18 +183,19 @@ public class conexion extends javax.swing.JFrame {
     }
         
         
-        public void ProcedimientoinsertCliente(JTextField nombrecl, JTextField dpi, JTextField telefono)
+        public void ProcedimientoinsertCliente(JTextField idproducto, JTextField idproveedor, JTextField descrpicion, JTextField precio)
     {
         try{
             Connection conecta = conectar();
-            CallableStatement proc = conecta.prepareCall(" CALL agregar_cliente(?,?,?)");
+            CallableStatement proc = conecta.prepareCall(" CALL agregar_cliente(?,?,?,?)");
             
 
-            proc.setString(1, nombrecl.getText());
-            proc.setString(2, dpi.getText());
-            proc.setString(3, telefono.getText());
+            proc.setString(1, idproducto.getText());
+            proc.setString(2, idproveedor.getText());
+            proc.setString(3, descrpicion.getText());
+            proc.setString(4, precio.getText());
             proc.execute();
-            JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo cliente!");
+            JOptionPane.showMessageDialog(null, "Se ha añadido un nuevo producto!");
         }catch(Exception e)
         {
             System.out.println(e);
