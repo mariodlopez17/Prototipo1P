@@ -257,10 +257,7 @@ public class nuevo_cliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        conexion conn = new conexion();
-        conn.ProcedimientoinsertCliente(jTextField1, jTextField2, jTextField3);
-        nuevo_cliente3 ventana = new nuevo_cliente3();
-        ventana.setVisible(true);
+ 
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
